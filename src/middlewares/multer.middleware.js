@@ -18,7 +18,7 @@ const fileFilter = (req, file, cb) => {
     if (file.mimetype.startsWith('image/') || file.mimetype.startsWith('video/')) {
         cb(null, true); // Accept the file
     } else {
-        cb(new Error('Invalid file type. Only JPEG and PNG files are allowed.'), false); // Reject the file
+        cb(new Error('Invalid file type.'), false); // Reject the file
     }
 };
 
